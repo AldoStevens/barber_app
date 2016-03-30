@@ -1,0 +1,25 @@
+<h1><%= @appointment.Name %>'s details</h1>
+  
+  <p>
+    Name: <%= @appointment.Name %>
+  </p>
+
+  <p>
+    Last name: <%= @appointment.Last_name %>
+  </p>
+
+  <p>
+    Phone number: <%= @appointment.Phone_number %>
+  </p>
+
+  <p>
+    Date: <%= @appointment.Date %>
+  </p>
+
+  <p>
+    Time: <%= @appointment.Time.strftime("%I:%M %p") %>
+  </p>
+
+  <%= link_to "Back", appointments_path %>
+
+

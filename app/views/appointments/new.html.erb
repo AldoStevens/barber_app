@@ -1,0 +1,30 @@
+<h1>fill in appointment details </h1>
+
+<%= form_for(@appointment) do |f| %>
+  <p>
+    <%= f.label :Name %>
+    <%= f.text_field :Name %>
+  </p>
+
+  <p>
+    <%= f.label :Last_name %>
+    <%= f.text_field :Last_name %>
+  </p>
+
+  <p>
+    <%= f.label :Phone_number %>
+    <%= f.text_field :Phone_number %>
+  </p>
+
+  <p> 
+    <%= f.label :Date %>
+    <%= f.text_field :Date %>
+  </p>
+
+  <p>
+    <%= f.label :Time %>
+    <%= f.text_field :Time %>
+  </p>
+
+  <%= f.submit %>
+<% end %>

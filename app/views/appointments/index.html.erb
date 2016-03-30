@@ -1,0 +1,11 @@
+<h1><%= @appointment.count %> Appointments</h1>
+
+<% @appointment.each do |appointment| %>
+
+  <p>
+    <%= link_to appointment.Name, appointment %>
+  </p>
+
+  <% end %>
+
+<%= link_to "New appointment", new_appointment_path %>
