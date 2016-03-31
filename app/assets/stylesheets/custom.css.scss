@@ -6,3 +6,21 @@ body {
   background: #D8D8D8;
   color: #791e9e;
 }
+
+.appointment-Name, .appointment-Date {
+	padding-left: 0.7;
+}
+
+.appointment-Name {
+	font-weight: bold;
+	font-size: 1.5em;
+	margin-bottom: 0.8;
+}
+
+.appointment-Date {
+	font-size: 1.2em;
+}
+
+#new-appointment-btn {
+	margin-bottom: 10px;
+}

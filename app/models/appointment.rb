@@ -4,4 +4,8 @@ class Appointment < ActiveRecord::Base
 	validates :Phone_number, presence: true
 	validates :Date, presence: true
 	validates :Time, presence: true
+
+	default_scope { order(created_at: :desc)}
 end
+
+
