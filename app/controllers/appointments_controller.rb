@@ -13,13 +13,28 @@ class AppointmentsController < ApplicationController
       flash[:success] = "Appointment has been created"
       redirect_to appointments_path
     else 
-      flash[:danger] = "Appointment has not been created"
+      flash.now[:danger] = "Appointment has not been created"
       render :new
     end
   end
 
   def show
     @appointment = Appointment.find(params[:id])
+  end
+
+  def edit
+    @appointment = Appointment.find(params[:id])
+  end
+
+  def update
+     @appointment = Appointment.find(params[:id])
+    if @appointment.update(appointment_params)
+      flash[:success] = "Appointment has been updated"
+      redirect_to appointments_path
+    else
+      flash.now[:danger] = "Appointment has not been update"
+      render :edit
+    end
   end
 
 

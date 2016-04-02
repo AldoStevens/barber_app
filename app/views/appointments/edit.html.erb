@@ -1,0 +1,81 @@
+
+<h3 class='text-center'>Edit Appointment</h3>
+<div class='row'>
+  <div class='col-md-12'>
+    <%= form_for(@appointment, :html => {class: "form-horizontal", role: "form"}) do |f| %>
+      <% if @appointment.errors.any? %>
+        <div class="panel panel-danger col-md-offset-1">
+          <div class="panel-heading">
+            <h2 class="panel-title">
+          <%= pluralize(@appointment.errors.count, "error") %>
+          prohibited this appointment from being saved:
+          </h2>
+
+          <div class="panel-body">
+            <ul>
+              <% @appointment.errors.full_messages.each do |msg| %>
+              <li>
+                <%= msg %>
+              </li>
+              <% end %>
+            </ul>
+          </div>
+        </div>
+    </div>
+    <% end %>
+
+    <div class='form-group'>
+      <div class='control-label col-md-1'>
+        <%= f.label :Name %>
+      </div>
+      <div class='col-md-11'>
+        <%= f.text_field :Name, class: 'form-control', placeholder: '', autofocus: true %>
+      </div>
+    </div>
+
+    <div class='form-group'>
+      <div class='control-label col-md-1'>
+        <%= f.label :Last_name %>
+      </div>
+      <div class='col-md-11'>
+        <%= f.text_field :Last_name, class: 'form-control', placeholder: '', autofocus: true %>
+      </div>
+    </div>
+
+    <div class='form-group'>
+      <div class='control-label col-md-1'>
+        <%= f.label :Phone_number %>
+      </div>
+      <div class='col-md-11'>
+        <%= f.text_field :Phone_number, class: 'form-control', placeholder: '', autofocus: true %>
+      </div>
+    </div>
+
+    <div class='form-group'>
+      <div class='control-label col-md-1'>
+        <%= f.label :Date %>
+      </div>
+      <div class='col-md-11'>
+        <%= f.text_field :Date, class: 'form-control', placeholder: '', autofocus: true %>
+      </div>
+    </div>
+
+    <div class='form-group'>
+      <div class='control-label col-md-1'>
+        <%= f.label :Time %>
+      </div>
+      <div class='col-md-11'>
+        <%= f.text_field :Time, class: 'form-control', placeholder: '', autofocus: true %>
+      </div>
+    </div>
+
+ 
+
+    <div class='form-group'>
+      <div class='col-md-offset-1 col-md-11'>
+        <%= f.submit class: 'btn btn-primary btn-lg pull-right' %>
+      </div>
+    </div>
+    <% end %>
+  </div>
+</div>
