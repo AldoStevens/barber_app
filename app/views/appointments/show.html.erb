@@ -20,6 +20,8 @@
     Time: <%= @appointment.Time.strftime("%I:%M %p") %>
   </p>
 
-  <%= link_to "Back", appointments_path %> | <%= link_to "Edit appointment", edit_appointment_path %>
+  <%= link_to "Back", appointments_path, class: "btn btn-primary btn-lg btn-space" %>
+  <%= link_to "Edit appointment", edit_appointment_path, class: "btn btn-primary btn-lg btn-space" %>
+  <%= link_to "Delete appointment", appointment_path(@appointment), method: :delete, data: { confirm: "Are you sure?"}, class: "btn btn-danger btn-lg btn-space" %>
 
 

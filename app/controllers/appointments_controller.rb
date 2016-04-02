@@ -37,6 +37,14 @@ class AppointmentsController < ApplicationController
     end
   end
 
+  def destroy
+    @appointment = Appointment.find(params[:id])
+    if @appointment.destroy
+      flash[:success] = "Appointment has been deleted"
+      redirect_to appointments_path
+    end
+  end
+
 
   private
 
